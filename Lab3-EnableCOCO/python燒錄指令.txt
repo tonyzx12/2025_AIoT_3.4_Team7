@@ -1,0 +1,1 @@
+python -m esptool -p COM3 --chip esp32p4 -b 115200 --no-stub --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 40m 0x2000 ./bootloader.bin 0x8000 ./partition-table.bin 0x10000 ./factory_demo.bin
